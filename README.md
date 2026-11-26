@@ -50,6 +50,30 @@ Dispersão das notas dos mesmos filmes e correlação de Spearman, calculada tam
 
 As bases são fotografias históricas, não consultas em tempo real. `movieId` do MovieLens e `id` da TMDB pertencem a sistemas diferentes; a integração utiliza `links.csv`.
 
+## Principais conclusões
+
+### Maior receita não significa maior múltiplo de receita/orçamento
+
+Entre os gêneros com pelo menos 30 filmes no recorte financeiro, **Animação** apresenta a maior receita mediana, aproximadamente **196,5 milhões**. Já **Música** lidera no múltiplo mediano de receita/orçamento, com **3,12**, seguida por **Terror**, com **2,90**.
+
+Essas métricas respondem a perguntas diferentes: a receita mede a bilheteria em valores absolutos, enquanto o múltiplo relaciona a receita ao orçamento informado. Esse múltiplo **não representa lucro**, pois não considera custos como marketing, distribuição e participação dos cinemas.
+
+### Volume de avaliações e nota média revelam aspectos diferentes do público
+
+**Drama** reúne o maior volume de avaliações no MovieLens, com **41.928 registros**. Por outro lado, **Film-Noir** apresenta a maior nota média por avaliação, aproximadamente **3,92 de 5**, com **870 avaliações**.
+
+O gênero mais avaliado não é necessariamente o mais bem avaliado. A diferença no tamanho das amostras também exige cautela: as médias refletem os usuários e filmes presentes na base, sem representar uma preferência universal do público.
+
+### MovieLens e TMDB apresentam forte associação na ordenação dos filmes
+
+Na comparação de **383 filmes**, com pelo menos **50 avaliações no MovieLens** e **100 votos na TMDB**, a correlação de Spearman é de **0,882**.
+
+Esse resultado indica que filmes com notas maiores no MovieLens também tendem a receber notas maiores na TMDB. A associação se refere à **ordenação das notas** e não significa igualdade entre as avaliações, equivalência entre os públicos ou uma relação causal.
+
+### Limites da interpretação
+
+Os resultados dependem dos recortes e critérios de inclusão adotados. Os gêneros se sobrepõem, portanto suas contagens não devem ser somadas como categorias exclusivas. Os valores financeiros não foram ajustados pela inflação, e as conclusões descrevem a amostra analisada.
+
 ## Metodologia e qualidade dos dados
 
 1. Diagnóstico de tipos, ausências, zeros, listas vazias, duplicidades e integridade referencial.
