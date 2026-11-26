@@ -48,6 +48,30 @@ A scatter plot of the same movies' ratings and Spearman correlation, also implem
 
 These are historical snapshots, not live data. MovieLens `movieId` and TMDB `id` are different identifier systems; integration uses `links.csv`.
 
+## Key Findings and Interpretation
+
+### Higher revenue does not necessarily mean a higher revenue-to-budget ratio
+
+Among genres with at least 30 films in the financial subset, **Animation** has the highest median revenue, approximately **196.5 million**. **Music**, however, leads in median revenue-to-budget ratio at **3.12**, followed by **Horror** at **2.90**.
+
+These metrics answer different questions: revenue measures absolute box office earnings, while the ratio relates revenue to the reported production budget. This ratio **does not represent profit**, as it excludes costs such as marketing, distribution, and theaters' share of ticket sales.
+
+### Rating volume and average scores reveal different aspects of audience activity
+
+**Drama** receives the largest number of MovieLens ratings, with **41,928 records**. **Film-Noir**, on the other hand, has the highest average score per rating, approximately **3.92 out of 5**, based on **870 ratings**.
+
+The most frequently rated genre is not necessarily the highest-rated one. Differences in sample size also require caution: these averages reflect the users and films included in the dataset, rather than a universal audience preference.
+
+### MovieLens and TMDB show a strong association in how films are ranked
+
+For **383 matched films**, each with at least **50 MovieLens ratings** and **100 TMDB votes**, the Spearman correlation is **0.882**.
+
+This indicates that films with higher MovieLens scores also tend to receive higher TMDB scores. The association concerns the **ordering of scores**; it does not imply identical ratings, equivalent audiences, or a causal relationship.
+
+### Interpretation Limits
+
+The findings depend on the selected subsets and inclusion criteria. Genres overlap, so their counts should not be added together as mutually exclusive categories. Financial figures have not been adjusted for inflation, and the conclusions describe the analyzed sample.
+
 ## Methodology and data quality
 
 1. Profile data types, missing values, zeros, empty lists, duplicates and referential integrity.
